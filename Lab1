@@ -1,1 +1,97 @@
+# Comments in python:
 
+x=1
+#the initial value of x is 1
+if(x>0):
+    print("These are two comments") #Print a string
+
+
+
+#Multiple statements in a single line
+# You can write two separate statements into a single line using a semicolon (;) 
+# character between two line. 
+
+print("Statement"); print("Statement")
+
+
+# Identation:
+x=1
+if(x>0):
+print("This Statemet has no indentation..") #This will throw an error 
+
+
+#Program with single space indentation
+x=1
+if(x>0):
+    print("This statement has single space indentation.")
+
+
+# Indentation of a single space+ single tab
+x=1
+if(x>0):
+    print("This is a statement with single space+ single indentation")
+
+
+# Data types
+a=1345
+print(type(a))
+b=-323
+print(type(b))
+c=0
+print(type(c))
+d=1.03
+print(type(d))
+e=0.34
+print(type(e))
+f=2.13e+10
+print(type(f))
+
+
+# Complex Numbers
+a=complex(2,3)
+print(type(a))
+print(a)
+
+b=2+3j
+print(type(b))
+print(b)
+
+# Bool type(True or False)
+x=True
+print(type(x))
+
+y=False
+print(type(y))
+
+
+# Strings
+s1="String"
+print(s1)
+s2='string'
+print(s2)
+s3="day's"
+print(s3)
+
+
+#Special characters in strings
+print("this is  a backslash(\\) mark")
+print("These are \'single quotes\'")
+print("These are \"double quotes\"")
+
+str="Artificial Intelligence"
+print(str[0])
+print(str[1])
+print(str[2])
+print(str[3])
+print(str[4])
+print(str[5])
+print(str[-7])
+
+
+#List
+list1=[1,2,3,4]
+print(list1)
+list2=["Python",0,-1]
+print(list2)
+list3=[] #Empty list
+print(list3)
