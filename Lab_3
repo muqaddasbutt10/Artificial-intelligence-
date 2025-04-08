@@ -1,1 +1,47 @@
 
+# Qs_1: Write a Program to find those numbers which are divisible by 7 and multiple of 5, 
+# between 1500 and 2700(both included)
+
+for num in range(1500,2701):
+   if(num%7==0 and num%5==0):
+      print(num, end=', ')
+
+# Qs_2: Write a python program to convert temperatures to and from Celsius, Fahrenheit
+
+#Fahrenheit to Celsius..
+f=int(input("Enter temperature in fahrenheit: "))
+print("Temperature in Celsius: ",(f-32)*5/9, "°C" )
+
+#Celsius to fahrenheit..
+c=int(input("Enter temperature in celsius: "))
+print("Temperature in fahrenheit: ", (c* 9/5)+32, "°F")
+
+# Qs_3: Write a python program to guess a number between 1 to 9.
+
+target=random.randint(1,9)
+
+while(True):
+    guess=int(input("Guess a number between 1 and 9: "))
+    if(guess==target):
+        print("Well Guessed!!!")
+        break
+
+# Qs_4: Write a python program to construct a pattern using a nested for loop
+'''
+*
+* *
+* * *
+* * * * 
+* * * * *
+* * * *
+* * *
+* *
+*
+
+'''
+for i in range(1,6):
+    print("* "*i)
+
+for i in range(4,0,-1):
+    print("* "*i)
+
