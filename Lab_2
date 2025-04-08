@@ -1,0 +1,71 @@
+#Iterative Structures in Python 
+
+# 1- While Loop:
+
+count = 0 
+while (count < 3):  
+    count = count + 1 
+    print("Hello World") 
+
+# 2- For Loop
+
+print("List Iteration") 
+l = ["geeks", "for", "geeks"] 
+for i in l: 
+    print(i)
+    
+# Iterating over a String 
+print(" String Iteration") 
+s = "Muqaddas" 
+for i in s : 
+    print(i) 
+
+# Functions in Python
+
+def my_function(): 
+    print("Hi..I am a function") 
+my_function()
+
+# With Parameters
+def funcc(fname): 
+    print(fname + " Butt") 
+funcc("Muqaddas") 
+funcc("Haya") 
+funcc("Zumar") 
+
+# Default Parameter Value
+
+def func1(country = "NewZeland"):
+    print("I am from "+ country) 
+func1("Pakistan")  
+func1("Syria")  
+func1()  
+func1("Turkey")
+
+# Passing a list as a parameter in a function
+
+def func2(food): 
+    for x in food: 
+       print(x) 
+fruits = ["apple", "mango", "grapes"]
+func2(fruits)
+
+# Function with return values
+
+def func3(x): 
+    return 2 * x 
+print(func3(3)) 
+print(func3(6)) 
+print(func3(8))
+
+# Classes and Objects in Python
+
+# Creating a class
+
+class MyClass:
+    x = 5
+
+# Creating an object
+
+p1 = MyClass()
+print(p1.x)
