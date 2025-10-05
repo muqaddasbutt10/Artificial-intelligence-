@@ -1,0 +1,59 @@
+#MiniMax
+def minimax(depth, idx, is_maximizing, values, max_depth):
+    if depth == max_depth:  # leaf node
+        offset = (2**max_depth) - 1
+        return values[idx-offset]
+        
+
+    if is_maximizing:
+        best = float("-inf")
+        for child_idx in [2 * idx + 1, 2 * idx + 2]:  # explore both children
+            value = minimax(depth + 1, child_idx, False, values, max_depth)
+            best = max(best, value)
+        return best
+    else:  # minimizing
+        best = float("inf")
+        for child_idx in [2 * idx + 1, 2 * idx + 2]:  # explore both children
+            value = minimax(depth + 1, child_idx, True, values, max_depth)
+            best = min(best, value)
+        return best
+
+
+# Example usage
+values = [3, 5, 2, 9]   # leaf node values
+tree_depth = 2          # height of the tree
+
+#Alpha Beta Pruning
+
+def minimax(depth, idx, is_maximizing, values, max_depth, alpha, beta):
+    if depth == max_depth:  # leaf node
+        offset = (2**max_depth) - 1
+        return values[idx-offset]
+
+    if is_maximizing:
+        best = float("-inf")
+        for child_idx in [idx * 2 + 1, idx * 2 + 2]:  # explore both children
+            value = minimax(depth + 1, child_idx, False, values, max_depth, alpha, beta)
+            best = max(best, value)
+            alpha = max(alpha, best)     # update alpha
+            if beta <= alpha:            # pruning condition
+                break
+        return best
+    else:  # minimizing
+        best = float("inf")
+        for child_idx in [idx * 2 + 1, idx * 2 + 2]:
+            value = minimax(depth + 1, child_idx, True, values, max_depth, alpha, beta)
+            best = min(best, value)
+            beta = min(beta, best)       # update beta
+            if beta <= alpha:            # pruning condition
+                break
+        return best
+
+
+# Example usage
+values = [4,8,9,3,2,-2,9,-1]   # leaf node values
+tree_depth = 3         # height of the tree
+
+print("The optimal value is:", minimax(0, 0, True, values, tree_depth, float("-inf"), float("inf")))
+
+print("The optimal value is:", minimax(0, 0, True, values, tree_depth))
